@@ -1,18 +1,20 @@
+import brownieImg from "../assets/brownie-cake.png"
+
 function BrownieCake({ enterWorld }) {
 
-const target=new Date("June 3, 2026 00:00:00")
-const now=new Date()
+const target = new Date("June 3, 2026 00:00:00")
+const now = new Date()
 
-const diff=target-now
+const diff = target - now
 
-const days=Math.floor(
-diff/(1000*60*60*24)
+const days = Math.floor(
+diff / (1000 * 60 * 60 * 24)
 )
 
-const hours=Math.floor(
-(diff%(1000*60*60*24))
+const hours = Math.floor(
+(diff % (1000 * 60 * 60 * 24))
 /
-(1000*60*60)
+(1000 * 60 * 60)
 )
 
 return(
@@ -45,8 +47,9 @@ who care about you.
 </div>
 
 <img
-src="/brownie-cake.png"
+src={brownieImg}
 className="cake"
+alt="Brownie Cake"
 />
 
 <div className="rightDecor">
@@ -154,6 +157,8 @@ margin-bottom:50px;
 
 width:760px;
 
+max-width:90%;
+
 border-radius:35px;
 
 box-shadow:
@@ -169,6 +174,8 @@ justify-content:center;
 align-items:center;
 
 gap:60px;
+
+flex-wrap:wrap;
 }
 
 .leftDecor,
@@ -236,6 +243,13 @@ color:white;
 
 box-shadow:
 0 0 25px #ff4fa3;
+}
+
+.enterBtn:hover{
+
+transform:scale(1.05);
+
+transition:.3s;
 }
 
 `}</style>
