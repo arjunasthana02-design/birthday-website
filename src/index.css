@@ -1,0 +1,92 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+
+width:100%;
+min-height:100%;
+
+overflow-x:hidden;
+
+font-family:
+Inter,
+sans-serif;
+
+background:black;
+
+color:white;
+
+}
+
+/* full pink + black vibe */
+
+body{
+
+background:
+radial-gradient(
+circle at top,
+#350018 0%,
+#14000c 35%,
+#000000 100%
+);
+
+position:relative;
+
+}
+
+/* pink atmosphere glow */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-250px;
+left:-250px;
+
+width:800px;
+height:800px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,20,147,.22),
+transparent 70%
+);
+
+filter:blur(100px);
+
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+right:-250px;
+bottom:-250px;
+
+width:800px;
+height:800px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,105,180,.20),
+transparent 70%
+);
+
+filter:blur(100px);
+
+z-index:-1;
+
+}
