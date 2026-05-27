@@ -1,15 +1,17 @@
 function FloatingPhotos({ goBack, openMoods }) {
 
-const photos = [
-"/photo1.jpeg",
-"/photo2.jpeg",
-"/photo3.jpeg",
-"/photo4.jpeg",
-"/photo5.jpeg",
-"/photo6.jpeg",
-"/photo7.jpeg",
-"/photo8.jpeg",
-"/photo9.jpeg"
+const photos=[
+
+`${import.meta.env.BASE_URL}photo1.jpeg`,
+`${import.meta.env.BASE_URL}photo2.jpeg`,
+`${import.meta.env.BASE_URL}photo3.jpeg`,
+`${import.meta.env.BASE_URL}photo4.jpeg`,
+`${import.meta.env.BASE_URL}photo5.jpeg`,
+`${import.meta.env.BASE_URL}photo6.jpeg`,
+`${import.meta.env.BASE_URL}photo7.jpeg`,
+`${import.meta.env.BASE_URL}photo8.jpeg`,
+`${import.meta.env.BASE_URL}photo9.jpeg`
+
 ]
 
 const artists=[
@@ -35,7 +37,9 @@ return(
 
 <button
 className="backBtn"
-onClick={goBack}
+onClick={()=>{
+if(goBack) goBack()
+}}
 >
 ← Back to brownie
 </button>
@@ -231,7 +235,9 @@ window.open(
 className="nextBtn"
 
 onClick={()=>{
+if(openMoods){
 openMoods()
+}
 }}
 
 >
