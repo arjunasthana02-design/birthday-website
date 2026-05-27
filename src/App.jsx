@@ -1,34 +1,34 @@
 import { useState } from "react"
-import Intro from "./pages/Intro"
-import Home from "./pages/Home"
-import Moods from "./pages/Moods"
-import Todo from "./pages/Todo"
+
 import BrownieCake from "./components/BrownieCake"
+import Home from "./pages/Home"
 
 function App() {
-  const [page, setPage] = useState("brownie")
 
-  return (
-    <>
-      {page === "brownie" && (
-        <BrownieCake next={() => setPage("intro")} />
-      )}
+const [entered,setEntered]=useState(false)
 
-      {page === "intro" && (
-        <Intro next={() => setPage("home")} />
-      )}
+function enterWorld(){
+setEntered(true)
+}
 
-      {page === "home" && (
-        <Home next={() => setPage("moods")} />
-      )}
+return(
 
-      {page === "moods" && (
-        <Moods next={() => setPage("todo")} />
-      )}
+<>
 
-      {page === "todo" && <Todo />}
-    </>
-  )
+{!entered ? (
+
+<BrownieCake enterWorld={enterWorld}/>
+
+) : (
+
+<Home/>
+
+)}
+
+</>
+
+)
+
 }
 
 export default App
