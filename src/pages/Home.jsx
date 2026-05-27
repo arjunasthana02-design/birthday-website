@@ -1,6 +1,6 @@
-import FloatingPhotos from "../components/FloatingPhotos";
+import FloatingPhotos from "../components/FloatingPhotos"
 
-function Home({ goBack, openMoods }) {
+function Home({goBack,openMoods}){
 
 return(
 
@@ -13,4 +13,4 @@ openMoods={openMoods}
 
 }
 
-export default Home;
+export default Home
