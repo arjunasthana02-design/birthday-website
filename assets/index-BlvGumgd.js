@@ -252,58 +252,33 @@ color:#ffd3ea;
 
 display:flex;
 
+width:max-content;
+
 gap:25px;
-
-overflow:hidden;
-
-animation:
-slide 40s linear infinite;
 
 margin-top:70px;
 
-}
-
-
-
-.photoCard{
-
-min-width:300px;
-
-height:450px;
-
-border-radius:35px;
-
-overflow:hidden;
-
-box-shadow:
-0 0 35px rgba(255,20,147,.55);
+animation:slide 28s linear infinite;
 
 }
 
+.photoTrack:hover{
 
-
-.photoCard img{
-
-width:100%;
-height:100%;
-object-fit:cover;
+animation-play-state:paused;
 
 }
-
-
 
 @keyframes slide{
 
-0%{
+from{
 
-transform:translateX(0)
+transform:translateX(0);
 
 }
 
-100%{
+to{
 
-transform:
-translateX(-50%)
+transform:translateX(calc(-50% - 12.5px));
 
 }
 
