@@ -1,12 +1,12 @@
 import FloatingPhotos from "../components/FloatingPhotos";
 
-function Home({openMoods}){
+function Home({ goBack, openMoods }) {
 
 return(
 
 <FloatingPhotos
-goBack={()=>setPage("brownie")}
-openMoods={()=>setPage("moods")}
+goBack={goBack}
+openMoods={openMoods}
 />
 
 )

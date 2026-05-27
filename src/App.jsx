@@ -10,36 +10,48 @@ function App() {
 const [page,setPage]=useState("brownie")
 
 if(page==="home"){
+
 return(
+
 <Home
-goNext={()=>{
-setPage("moods")
-}}
 goBack={()=>{
 setPage("brownie")
 }}
+openMoods={()=>{
+setPage("moods")
+}}
 />
+
 )
+
 }
 
 if(page==="moods"){
+
 return(
+
 <Moods
 goBack={()=>{
 setPage("home")
 }}
 />
+
 )
+
 }
 
 if(page==="todo"){
+
 return(
+
 <Todo
 goBack={()=>{
 setPage("moods")
 }}
 />
+
 )
+
 }
 
 return(
