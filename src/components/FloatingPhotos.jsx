@@ -351,13 +351,13 @@ color:#ffd3ea;
 
 display:flex;
 
-width:max-content;
+width:fit-content;
 
 gap:25px;
 
 margin-top:70px;
 
-animation:slide 28s linear infinite;
+animation:slide 40s linear infinite;
 
 }
 
@@ -367,18 +367,40 @@ animation-play-state:paused;
 
 }
 
-@keyframes slide{
+.photoCard{
 
-from{
+flex:none;
 
-transform:translateX(0);
+width:300px;
+
+height:450px;
+
+border-radius:35px;
+
+overflow:hidden;
+
+box-shadow:
+0 0 35px rgba(255,20,147,.55);
 
 }
 
+.photoCard img{
+
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+
+}
+
+@keyframes slide{
+
+from{
+transform:translateX(0);
+}
+
 to{
-
-transform:translateX(calc(-50% - 12.5px));
-
+transform:translateX(-2925px);
 }
 
 }
