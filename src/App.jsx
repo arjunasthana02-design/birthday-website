@@ -2,30 +2,53 @@ import { useState } from "react"
 
 import BrownieCake from "./components/BrownieCake"
 import Home from "./pages/Home"
+import Moods from "./pages/Moods"
+import Todo from "./pages/Todo"
 
 function App() {
 
-const [entered,setEntered]=useState(false)
+const [page,setPage]=useState("brownie")
 
-function enterWorld(){
-setEntered(true)
+if(page==="home"){
+return(
+<Home
+goNext={()=>{
+setPage("moods")
+}}
+goBack={()=>{
+setPage("brownie")
+}}
+/>
+)
+}
+
+if(page==="moods"){
+return(
+<Moods
+goBack={()=>{
+setPage("home")
+}}
+/>
+)
+}
+
+if(page==="todo"){
+return(
+<Todo
+goBack={()=>{
+setPage("moods")
+}}
+/>
+)
 }
 
 return(
 
-<>
-
-{!entered ? (
-
-<BrownieCake enterWorld={enterWorld}/>
-
-) : (
-
-<Home/>
-
-)}
-
-</>
+<BrownieCake
+enterWorld={()=>{
+setPage("home")
+}}
+/>
 
 )
 
