@@ -5,7 +5,8 @@ function Home({openMoods}){
 return(
 
 <FloatingPhotos
-openMoods={openMoods}
+goBack={()=>setPage("brownie")}
+openMoods={()=>setPage("moods")}
 />
 
 )
